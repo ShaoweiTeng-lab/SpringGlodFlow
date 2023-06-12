@@ -17,6 +17,7 @@ public class userController {
         return ResponseEntity.ok().body(orderService.createGoldFlow(goldFlowRequest));
 
     }
+
     @RequestMapping("/successPay/{goldFlowNumber}")
     public ResponseEntity<String> paySuccess(@PathVariable("goldFlowNumber") String goldFlowNumber){
         System.out.println(goldFlowNumber +"成功付款");
